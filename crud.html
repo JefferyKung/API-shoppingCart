@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Jeff V2 API vers.</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+  </head>
+  
+  <body>
+    <header class="header">
+     
+      <div id="narBar">
+        <img id="cartImage" src="https://cdn-icons-png.flaticon.com/512/679/679903.png">
+        <h3 id="itemNumH3">(0)</h3>
+      </div>
+
+      <div id="cartList">
+
+        <!-- Modal content -->
+        <div class="cartList">
+          <span class="cartListclose">&times;</span>
+          <button id="placeOrderBtn">Place Order</button>
+          <p>Here is your order</p>
+        </div>
+        <div>
+
+          <table border="1" width="100%">
+            <thead>
+              <!-- 第一欄項目名稱 -->
+              <tr>
+                <th><input type="checkbox" onclick="check(this)"></th>
+                <th>ITEM</th>
+                <th>PIC</th>
+                <th>PRICE</th>
+                <th>AMOUNT</th>
+                <th>DELETE</th>
+              </tr> 
+            </thead>
+        
+            <tbody id="tb">
+              <!-- 第二欄 -->
+              <!-- <tr>
+                <th><input type="checkbox" onclick="calculate()"></th>
+        
+                <td>商品1</td>
+                <td><img src="images/gallery-img-3.jpeg" width="100"></td>
+                <td>30.00</td>
+                <td>
+                  <input type="button" value="-" onclick="jian(this)">
+                  <input type="number" value="1">
+                  <input type="button" value="+" onclick="jia(this)">
+                </td>
+                <td><input type="button" value="移除" onclick="del(this)"></td>
+                </tr> -->
+                
+              <!-- 第三欄 -->
+              <!-- <tr>
+                <th><input type="checkbox" onclick="calculate()"></th>
+                <td>商品2</td>
+                <td><img src="images/gallery-img-3.jpeg" width="100"></td>
+                <td>20.00</td>
+                <td>
+                  <input type="button" value="-" onclick="jian(this)">
+                  <input type="number" value="1">
+                  <input type="button" value="+" onclick="jia(this)">
+                </td>
+              
+                <td><input type="button" value="移除" onclick="del(this)"></td>
+        
+              </tr>
+            </tbody> -->
+          <!-- 第四欄--total -->
+            <tfoot>
+              <tr>
+                <td colspan="6">Total: <span id="total">0</span> CAD$</td>
+              </tr>
+            </tfoot>
+          </table>
+         </div>
+    </header>
+    <template id="single-post">
+      <li class="post-item">
+        <span><h2></h2></span>
+        $CAD<span><p></p></span>
+        <img id="postPic" src="" width="480px" height="270px"><br>
+        <button type="button" class="card-overlay-btn" value="新增至購物車" onclick="add(this)">Order now</button>
+      </li>
+    </template>
+    <section id="new-post">
+      <form>
+        <div class="form-control">
+          <label for="title">Title</label>
+          <input type="text" id="title" />
+        </div>
+        <div class="form-control">
+          <label for="content">Content</label>
+          <textarea rows="3" id="content"></textarea>
+        </div>
+        <button type="submit">ADD</button>
+      </form>
+      
+    </section>
+    <section id="available-posts">
+      <button>FETCH MENU</button>
+      <ul class="posts"></ul>
+      
+      
+    </section>
+
+    <section>
+      <div id="myModal" class="modal">
+        
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Successfully added into cart</p>
+        </div>
+       </div>
+
+
+    </section>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js" defer></script>
+  </body>
+</html>

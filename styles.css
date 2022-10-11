@@ -1,0 +1,264 @@
+
+* {
+box-sizing: border-box;
+}
+
+html {
+font-family: sans-serif;
+}
+
+body {
+margin: 0;
+background-color: #000053;
+}
+
+button {
+font: inherit;
+border: 1px solid #9c6000;
+color: white;
+background: #ce7f00;
+padding: 0.5rem 1.5rem;
+border-radius: 5px;
+cursor: pointer;
+}
+
+button:focus {
+outline: none;
+}
+
+button:hover,
+button:active {
+background: #855200;
+border-color: #9c6000;
+}
+
+label,
+input,
+textarea {
+display: block;
+margin: 0.5rem 0;
+}
+
+input,
+textarea {
+width: 100%;
+font: inherit;
+padding: 0.15rem 0.25rem;
+border: 1px solid #ccc;
+}
+
+input:focus,
+textarea:focus {
+outline: none;
+border-color: #000053;
+}
+
+section {
+width: 100%;
+/* max-width: 90%; */
+margin-top: 10%;
+border: 1px solid #ccc;
+border-radius: 10px;
+padding: 1.5rem;
+background-color: antiquewhite;
+}
+
+.form-control {
+margin: 0.5rem 0;
+}
+
+.posts {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.post-item {
+margin: 1rem 0;
+
+padding: 1rem;
+/* width: 30%; */ 
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
+text-align: center;
+}
+
+.post-item h2,
+.post-item p {
+margin: 0.5rem 0;
+}
+
+.post-item h2 {
+font-size: 1.5rem;
+color: #414141;
+}
+
+.post-item button {
+border-color: #920101;
+background: #920101;
+}
+
+.post-item button:hover,
+.post-item button:active {
+border-color: #dd2929;
+background: #dd2929;
+}
+
+.posts{
+display: grid;
+grid-template-columns: 33% 33% 33%;
+grid-template-rows: 50% 50%;
+}
+
+#orderBtn{
+margin-top: 2%;
+}
+
+/* new */
+
+#narBar {
+    background-color: white;
+    display: flex;
+    position: absolute;
+    left: 87%;
+    top:10px;
+    color: white;
+  }
+  
+  #cartImage{
+    width: 30%
+  }
+  
+  #cartImage:hover,
+  #cartImage:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #narBar h3{
+    margin-top: 10%;
+    margin-left: 2%;
+    font-size: 1.5rem;
+    color: black;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    z-index:999;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    text-align: center;
+   
+  }
+  
+  .modal-content p{
+    font-size: 1.5rem;
+    color: green;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  
+  #cartList {
+    background-color: rgba(247, 86, 86, 0.7);
+    margin-top: 6.5%;
+    margin-left: 72.5%;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 26%; 
+    height: 68.5%;
+    text-align: center;
+    display:none;
+    z-index:999;
+    color: black;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  
+  #cartList p{
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+  }
+  
+  /* The Close Button */
+  .cartListclose {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .cartListclose:hover,
+  .cartListclose:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  input[type='number']{
+    width: 23px;
+  } 
+  
+  #placeOrderBtn{
+    background:    #15d798;
+    border:        1px solid #15d798;
+    border-radius: 11px;
+    padding:       8px 32px;
+    color:         #ffffff;
+    display:       inline-block;
+    font:          normal bold 18px/1 "Open Sans", sans-serif;
+    text-align:    center;
+    margin-bottom: 10px;
+  }
+  
+  #placeOrderBtn:hover,
+  #placeOrderBtn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+  #inputNum{
+    width:50%;
+  }
+
+  input[type="button"]{
+    width: 50%;
+  }
+
+  td:nth-child(5){
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+  }
